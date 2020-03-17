@@ -10,11 +10,16 @@ import { RootState } from "./components/types";
 import { renderToString } from "react-dom/server";
 import Top from "./components/pages/Top";
 
+require("dotenv").config();
+
 const server = express();
 server
   .disable("x-powered-by")
-  .use("/static", express.static(path.join(path.resolve('./'), "/dist/static")))
-  .use("/robots.txt", express.static(path.join(path.resolve('./'), "/dist/robots.txt")))
+  .use("/static", express.static(path.join(path.resolve("./"), "/dist/static")))
+  .use(
+    "/robots.txt",
+    express.static(path.join(path.resolve("./"), "/public/robots.txt"))
+  )
   .get("/", async (req, res) => {
     const client = new ApolloClient({
       link: createHttpLink({

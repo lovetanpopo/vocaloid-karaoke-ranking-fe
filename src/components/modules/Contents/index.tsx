@@ -53,6 +53,11 @@ const Contents: React.FC<Props> = ({ state }) => {
           <li>順位：{selectedItem.rank}</li>
         </ul>
       </section>
+      <section>
+        <a href={"https://www.karatetsu.com/vocala/pickup/ranking.php"}>
+          （出典）ボカロ月間カラオケランキング TOP5,000 - カラオケの鉄人
+        </a>
+      </section>
     </>
   );
 };

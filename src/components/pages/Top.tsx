@@ -24,6 +24,12 @@ const Top: React.FC<Props> = ({ preloadSate }) => {
         />
         <div id="root" />
         <script src={"/static/js/bundle.js"} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              "<!-- 利用しているOSSは package.json を参照してください。 https://github.com/lovetanpopo/vocaloid-karaoke-ranking-fe -->"
+          }}
+        />
       </body>
     </html>
   );
