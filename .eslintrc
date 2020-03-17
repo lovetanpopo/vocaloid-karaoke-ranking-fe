@@ -1,0 +1,44 @@
+{
+  "plugins": ["react-hooks"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "typescript",
+    "typescript/react",
+    "typescript/prettier-react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-irregular-whitespace": "off",
+    "no-console": ["error", { "allow": ["log"] }],
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
+    "no-useless-catch": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-angle-bracket-type-assertion": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
