@@ -30,7 +30,7 @@ jobs:
       # deploy web app using Azure credentials
       - uses: azure/webapps-deploy@v1
         with:
-          app-name: 'vocaloid-karaoke-ranking-fe'
+          app-name: 'vocaloid-karaoke-ranking'
 
       # Azure logout
       - name: logout
