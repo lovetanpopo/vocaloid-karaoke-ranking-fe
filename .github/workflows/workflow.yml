@@ -23,6 +23,8 @@ jobs:
         run: |
           npm install
           npm run build
+          rm -rf node_modules
+          npm install --production
           echo "AUTHORIZATION=${{secrets.AUTHORIZATION}}" >> .env
         env:
           PORT: 8080
