@@ -10,10 +10,6 @@ jobs:
       - name: 'Checkout Github Action'
         uses: actions/checkout@master
 
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
       - name: Setup Node 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,11 +26,7 @@ jobs:
           PORT: 8080
 
       # deploy web app using Azure credentials
-      - uses: azure/webapps-deploy@v1
+      - uses: azure/webapps-deploy@v2
         with:
           app-name: 'vocaloid-karaoke-ranking'
-
-      # Azure logout
-      - name: logout
-        run: |
-          az logout
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
