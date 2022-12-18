@@ -4,8 +4,7 @@ import { hydrate, render } from "react-dom";
 import Contents from "./components/modules/Contents";
 
 const renderMethod = module.hot ? render : hydrate;
-// @ts-ignore
-const preloadedState: RootState = window.__store;
+const preloadedState: RootState = (window as any).__store;
 
 renderMethod(
   <Contents state={preloadedState} />,

@@ -1,15 +1,13 @@
 import React from "react";
 import express from "express";
 import path from "path";
-import ApolloClient from "apollo-client";
-import { gql } from "apollo-boost";
+import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import fetch from "isomorphic-fetch";
-import { createHttpLink } from "apollo-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
 import { RootState } from "./components/types";
 import { renderToString } from "react-dom/server";
 import Top from "./components/pages/Top";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
 
 const server = express();
