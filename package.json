@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "apollo-client": "^2.6.10",

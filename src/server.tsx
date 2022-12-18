@@ -22,6 +22,7 @@ server
     const client = new ApolloClient({
       link: createHttpLink({
         uri: "https://vocaloid-karaoke-ranking-api.azurewebsites.net/graphql",
+        //uri: "http://localhost:4000/graphql",
         fetch: fetch,
         headers: {
           Authorization: process.env.AUTHORIZATION
